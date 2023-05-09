@@ -130,24 +130,24 @@
 
 
 # ==================================================================
-# Installing CUDA packages (CUDA Toolkit 11.7.1 & CUDNN 8.5.0)
+# Installing CUDA packages (CUDA Toolkit 11.6.0 & CUDNN 8.5.0)
 # ------------------------------------------------------------------
 
     # Based on https://developer.nvidia.com/cuda-toolkit-archive
     # Based on https://developer.nvidia.com/rdp/cudnn-archive
 
-    wget https://developer.download.nvidia.com/compute/cuda/11.7.1/local_installers/cuda_11.7.1_515.65.01_linux.run
-    sudo sh cuda_11.7.1_515.65.01_linux.run --silent --toolkit
-    export PATH=$PATH:/usr/local/cuda-11.7/bin
-    export LD_LIBRARY_PATH=/usr/local/cuda-11.7/lib64
-    rm cuda_11.7.1_515.65.01_linux.run
+    wget https://developer.download.nvidia.com/compute/cuda/11.6.0/local_installers/cuda_11.6.0_510.39.01_linux.run
+    sudo sh cuda_11.6.0_510.39.01_linux.run --silent --toolkit
+    export PATH=$PATH:/usr/local/cuda-11.6/bin
+    export LD_LIBRARY_PATH=/usr/local/cuda-11.6/lib64
+    rm cuda_11.6.0_510.39.01_linux.run
 
     wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
     sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
     sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/3bf863cc.pub
     sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
-    sudo $APT_INSTALL libcudnn8=8.5.0.*-1+cuda11.7
-    sudo $APT_INSTALL libcudnn8-dev=8.5.0.*-1+cuda11.7
+    sudo $APT_INSTALL libcudnn8=8.5.0.*-1+cuda11.6
+    sudo $APT_INSTALL libcudnn8-dev=8.5.0.*-1+cuda11.6
 
 
 # ==================================================================
